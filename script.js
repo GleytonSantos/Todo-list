@@ -123,7 +123,7 @@ function UpdateOnSelectionItems() {
   setLocalStorage();
 
   updateText.innerText = taskValue.value;
-  addUpdate.setAttribute("onclick", "CreateToDoItems()");
+  addUpdate.setAttribute("onclick", "createTask()");
   addUpdate.setAttribute(
     "src",
     "https://raw.githubusercontent.com/GleytonSantos/Todo-list/main/img/plus.png"
