@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caça ao Tesouro</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="taskHeader">
+        <h1>Lista de tarefas</h1>
+        <img src="./img/notepad.png" alt="*" />
+      </div>
+
+      <div class="taskInput">
+        <!-- <label for="inputTask">Adicione a sua tarefa</label> -->
+        <input
+          type="text"
+          id="inputTask"
+          placeholder="Adicione as suas tarefas"
+        />
+        <img
+          src="./img/plus.png"
+          alt="+"
+          id="taskAddElement"
+          onclick="createTask()"
+        />
+      </div>
+
+      <div class="taskContainer">
+        <h4 id="alert"></h4>
+        <ul id="listItems" class="list-items"></ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
