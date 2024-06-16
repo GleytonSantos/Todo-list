@@ -28,8 +28,8 @@ function createTask() {
     let li = document.createElement("li");
     const todoItems = `<div title="clique duas vezes para completar" ondbclick="CompletedTask(this)">${taskValue.value}</div>
 <div>
-                    <img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/img/pencil.png" />
-                    <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="/img/trashcan.png" /></div></div>
+                    <img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="./img/pencil.png" />
+                    <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="./img/trashcan.png" /></div></div>
     
     `;
     console.log(li);
@@ -71,14 +71,14 @@ function ReadToDoItems() {
     ${
       style === ""
         ? ""
-        : '<img class="todo-controls" src="/img/check-mark.png" />'
+        : '<img class="todo-controls" src="./img/check-mark.png" />'
     }</div><div>
     ${
       style === ""
-        ? '<img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/img/pencil.png" />'
+        ? '<img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="./img/pencil.png" />'
         : ""
     }
-    <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="/img/trashcan.png" /></div></div>`;
+    <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="./img/trashcan.png" /></div></div>`;
     li.innerHTML = todoItems;
     listItems.appendChild(li);
   });
@@ -94,7 +94,7 @@ function UpdateToDoItems(e) {
       e.parentElement.parentElement.querySelector("div").innerText;
     updateText = e.parentElement.parentElement.querySelector("div");
     addUpdate.setAttribute("onclick", "UpdateOnSelectionItems()");
-    addUpdate.setAttribute("src", "/images/refresh.png");
+    addUpdate.setAttribute("src", "./img/refresh.png");
     taskValue.focus();
   }
 }
@@ -121,7 +121,7 @@ function UpdateOnSelectionItems() {
 
   updateText.innerText = taskValue.value;
   addUpdate.setAttribute("onclick", "CreateToDoItems()");
-  addUpdate.setAttribute("src", "/img/plus.png");
+  addUpdate.setAttribute("src", "./img/plus.png");
   taskValue.value = "";
   setAlertMessage("Task Atualizada com sucesso");
 }
